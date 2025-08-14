@@ -34,6 +34,40 @@ export default function Navbar({ cartItemCount = 0 }: NavbarProps) {
 
     const debouncedSearch = useDebounce(searchTerm, 300);
 
+    const [showNavbar, setShowNavbar] = useState(true);
+    const lastScrollY = useRef(0);
+    const ticking = useRef(false);
+
+    useEffect(() => {
+        function updateNavbar() {
+            const currentScrollY = window.scrollY;
+
+            if (Math.abs(currentScrollY - lastScrollY.current) < 10) {
+                ticking.current = false;
+                return;
+            }
+
+            if (currentScrollY < lastScrollY.current) {
+                setShowNavbar(true); 
+            } else {
+                setShowNavbar(false); 
+            }
+
+            lastScrollY.current = currentScrollY > 0 ? currentScrollY : 0;
+            ticking.current = false;
+        }
+
+        function onScroll() {
+            if (!ticking.current) {
+                window.requestAnimationFrame(updateNavbar);
+                ticking.current = true;
+            }
+        }
+
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
     // React Query pakai searchProducts
     const { data: products = [], isLoading } = useQuery({
         queryKey: ["searchProducts", debouncedSearch],
@@ -69,7 +103,10 @@ export default function Navbar({ cartItemCount = 0 }: NavbarProps) {
     };
 
     return (
-        <nav className="bg-white dark:bg-gray-900 shadow-md relative z-50">
+        <nav
+            className={`bg-white dark:bg-gray-900 shadow-md z-50 sticky top-0 transform transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"
+                }`}
+        >
             <div className="container mx-auto flex items-center justify-between p-4 h-16">
                 {/* Logo */}
                 <Link href="/" className="flex-shrink-0 flex items-center h-full">
@@ -228,7 +265,7 @@ export default function Navbar({ cartItemCount = 0 }: NavbarProps) {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="md:hidden px-4 overflow-hidden border-t border-gray-300 dark:border-gray-700 z-50"
+                        className="md:hidden px-4 overflow-hidden border-t border-gray-300 bg-white dark:border-gray-700 z-50 "
                     >
                         <div className="container mx-auto px-4 py-2">
                             <form
@@ -249,14 +286,12 @@ export default function Navbar({ cartItemCount = 0 }: NavbarProps) {
                                     onFocus={() => searchTerm.length > 0 && setShowDropdown(true)}
                                 />
                                 <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+                                
                             </form>
 
                             {showDropdown && debouncedSearch && (
                                 <>
-                                    <div
-                                        className="fixed inset-x-0 top-16 bottom-0 bg-black opacity-50 z-40"
-                                        onClick={() => setShowDropdown(false)}
-                                    />
+                                   
                                     <ul
                                         className="absolute top-full left-0 right-0 z-50 bg-white rounded shadow-lg max-h-64 overflow-auto mt-1 border border-gray-300 dark:bg-gray-800 dark:border-gray-700"
                                         onMouseDown={(e) => e.preventDefault()}
@@ -305,6 +340,8 @@ export default function Navbar({ cartItemCount = 0 }: NavbarProps) {
                     </motion.div>
                 )}
             </AnimatePresence>
+
+            
         </nav>
     );
 }
