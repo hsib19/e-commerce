@@ -238,7 +238,7 @@ export default function ProductDetailPage() {
 
                 {/* Bottom Navbar */}
                 <div className="fixed bottom-0 left-0 w-full bg-white border-t border-t-gray-300 shadow-md flex items-center justify-between px-4 py-5 z-50">
-                    <button onClick={() => router.back()} className="flex items-center space-x-2">
+                    <button onClick={() => router.back()} className="flex items-center space-x-2 cursor-pointer">
                         <FiChevronLeft className="w-6 h-6" />
                         <span>Back</span>
                     </button>
