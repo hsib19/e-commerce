@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "name": "the Barista Express",
+    "slug": "the-barista-express",
+    "price": 798,
+    "discount": 10,
+    "description": "<p>The Barista Express is one of the most popular and highly acclaimed espresso machines for home use, offering a perfect combination of performance, style, and user-friendly operation. Designed for coffee enthusiasts of all levels, it allows you to enjoy a true café experience without leaving your kitchen.</p><p>Featuring an integrated conical burr grinder, the Barista Express ensures that your coffee is freshly ground for every shot. The low-pressure pre-infusion gently soaks the grounds to enhance flavor extraction, while the precise PID temperature control maintains optimal brewing conditions for a rich, balanced espresso.</p><p>Its professional-grade steam wand lets you create silky microfoam for cappuccinos, lattes, and flat whites. This makes it ideal not only for espresso lovers but also for those who enjoy milk-based drinks. You can adjust grind size, dose, and tamping pressure to explore endless flavor possibilities.</p><p>Constructed from durable stainless steel, the Barista Express is built to withstand daily use while maintaining its elegant appearance. The thoughtful design includes intuitive controls and clear indicators, making it easy to operate even for beginners.</p><p>Whether you’re starting your coffee journey or looking to refine your skills, the Barista Express delivers exceptional results every time. Add freshly roasted beans, and you’ll be crafting café-quality drinks in the comfort of your own home.</p>",
+    "tags": ["espresso", "semi-automatic", "home use", "coffee grinder", "steam wand"],
+    "images": [
+      { "url": "/images/products/barista_express_main.png", "color": "Silver", "main": true },
+      { "url": "/images/products/barista_express_main_black.png", "color": "Black", "main": false },
+      { "url": "/images/products/barista_express_1.png", "color": "Silver", "main": false },
+      { "url": "/images/products/barista_express_2.png", "color": "Silver", "main": false },
+      { "url": "/images/products/barista_express_3.jpg", "color": "Silver", "main": false }
+    ],
+    "variants": [
+      { "color": "Silver" },
+      { "color": "Black" }
+    ],
+    "whatsInTheBox": [
+      "54mm Portafilter, stainless steel with double spout",
+      "4 Espresso Filter Baskets – 9g & 18g pressurised, 9g & 18g unpressurised",
+      "Integrated, Magnetic Tamper",
+      "480ml (16oz) Thermal Milk Jug",
+      "Dosing Funnel",
+      "Leveling Tool",
+      "Water Filter",
+      "Maintenance Kit – cleaning brush, Allen key, cleaning disc, steam wand pin",
+      "1 Descaling Dose, and 2 Cleaning Tablets"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "the Bambino",
+    "slug": "the-bambino",
+    "price": 498,
+    "discount": 0,
+    "description": "<p>The Bambino is a compact espresso machine that proves great coffee doesn’t have to come from a bulky or complicated setup. Perfect for small kitchens, apartments, or office spaces, it delivers café-quality espresso in a sleek, space-saving design.</p><p>With an ultra-fast heat-up time, you can brew your morning espresso in just seconds. The machine’s simple control panel makes it easy for beginners to learn, while its professional-grade 54mm portafilter ensures consistent, well-balanced flavor extraction in every shot.</p><p>The powerful steam wand allows you to froth milk to your preferred texture, opening the door to cappuccinos, lattes, and more. Its straightforward operation means you can focus on enjoying your coffee rather than figuring out complicated settings.</p><p>Built with durability and style in mind, the Bambino’s stainless steel finish complements any kitchen décor. It’s also easy to clean and maintain, making it a reliable everyday companion for your coffee needs.</p><p>If you’re looking for an affordable, beginner-friendly espresso machine that still delivers outstanding results, the Bambino is the perfect choice for making delicious coffee at home with minimal effort.</p>",
+    "tags": ["espresso", "compact", "beginner-friendly", "steam wand", "affordable"],
+    "images": [
+      { "url": "/images/products/bambino_main.png", "color": "Silver", "main": true },
+      { "url": "/images/products/bambino_1.png", "color": "Silver", "main": false },
+      { "url": "/images/products/bambino_2.png", "color": "Silver", "main": false },
+      { "url": "/images/products/bambino_3.png", "color": "Silver", "main": false }
+    ],
+    "variants": [
+      { "color": "Silver" }
+    ],
+    "whatsInTheBox": [
+      "54mm Portafilter, stainless steel with double spout",
+      "2 Espresso Filter Baskets – 9g & 18g pressurised",
+      "Integrated Tamper",
+      "480ml (16oz) Milk Jug",
+      "Water Filter",
+      "Cleaning Tool Kit"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "the Bambino Plus",
+    "slug": "the-bambino-plus",
+    "price": 598,
+    "discount": 5,
+    "description": "<p>The Bambino Plus is a premium upgrade to the original Bambino, bringing advanced features and automation to make your coffee-making experience even easier. Compact yet powerful, it’s ideal for those who want café-quality drinks with minimal effort.</p><p>One of its standout features is the automatic milk frothing system, which creates perfectly textured microfoam every time. This means you can enjoy silky lattes and creamy cappuccinos without needing barista-level skills.</p><p>With a rapid 3-second heat-up time, the Bambino Plus ensures you won’t have to wait for your morning coffee. The 54mm portafilter and precise temperature control deliver consistent flavor and aroma in every cup.</p><p>Its stainless steel construction provides durability, while the compact design ensures it fits seamlessly into any kitchen space. Cleaning and maintenance are straightforward, making it a practical choice for daily use.</p><p>For coffee lovers who value convenience without sacrificing quality, the Bambino Plus offers a perfect balance of performance, style, and ease of use, making it a standout in any home setup.</p>",
+    "tags": ["espresso", "automatic milk frother", "fast heat-up", "compact", "cafe-quality"],
+    "images": [
+      { "url": "/images/products/bambino_plus_main.png", "color": "Silver", "main": true },
+      { "url": "/images/products/bambino_plus_1.png", "color": "Silver", "main": false },
+      { "url": "/images/products/bambino_plus_2.png", "color": "Silver", "main": false },
+      { "url": "/images/products/bambino_plus_3.png", "color": "Silver", "main": false }
+    ],
+    "variants": [
+      { "color": "Silver" }
+    ],
+    "whatsInTheBox": [
+      "54mm Portafilter, stainless steel with double spout",
+      "4 Espresso Filter Baskets – 9g & 18g pressurised, 9g & 18g unpressurised",
+      "Integrated Tamper",
+      "480ml (16oz) Milk Jug",
+      "Dosing Funnel",
+      "Automatic Steam Wand Attachment",
+      "Water Filter",
+      "Cleaning Tool Kit"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "the Oracle Touch",
+    "slug": "the-oracle-touch",
+    "price": 3988,
+    "discount": 15,
+    "description": "<p>The Oracle Touch is the ultimate espresso machine for home baristas who demand both precision and convenience. Combining cutting-edge technology with a luxurious design, it delivers a coffee experience on par with your favorite café.</p><p>Its intuitive touch screen interface allows you to select from pre-set café drinks or customize your own with adjustments for coffee strength, milk temperature, and texture. You can save your preferences for consistent results every time.</p><p>The dual boiler system enables you to brew espresso and steam milk simultaneously, ensuring quick preparation without sacrificing quality. An integrated conical burr grinder provides fresh grounds on demand, while precise temperature control guarantees optimal extraction.</p><p>Automatic milk texturing produces silky microfoam suitable for latte art, making it perfect for both everyday coffee and special occasions. The robust stainless steel body ensures durability and a premium look that enhances any kitchen space.</p><p>For serious coffee lovers who want the very best in performance, design, and ease of use, the Oracle Touch transforms your home into a full-fledged coffeehouse, offering professional results at the touch of a button.</p>",
+    "tags": ["espresso", "touch screen", "dual boiler", "automatic milk texturing", "high-end"],
+    "images": [
+      { "url": "/images/products/oracle_touch_main.jpg", "color": "Silver", "main": true },
+      { "url": "/images/products/oracle_touch_1.png", "color": "Silver", "main": false },
+      { "url": "/images/products/oracle_touch_2.png", "color": "Silver", "main": false },
+      { "url": "/images/products/oracle_touch_3.png", "color": "Silver", "main": false }
+    ],
+    "variants": [
+      { "color": "Silver" }
+    ],
+    "whatsInTheBox": [
+      "58mm Commercial-grade Portafilter",
+      "4 Espresso Filter Baskets – single and double, pressurised and unpressurised",
+      "480ml (16oz) Stainless Steel Milk Jug",
+      "Automatic Steam Wand Attachment",
+      "Integrated Grinder Cleaning Kit",
+      "Water Filter",
+      "Cleaning Brush",
+      "Allen Key",
+      "Cleaning Tablets",
+      "Descaling Solution"
+    ]
+  }
+]
