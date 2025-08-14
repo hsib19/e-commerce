@@ -228,7 +228,7 @@ export default function Navbar({ cartItemCount = 0 }: NavbarProps) {
                         animate={{ height: "auto", opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.4, ease: "easeInOut" }}
-                        className="md:hidden px-4 overflow-hidden border-t border-gray-300 dark:border-gray-700"
+                        className="md:hidden px-4 overflow-hidden border-t border-gray-300 dark:border-gray-700 z-50"
                     >
                         <div className="container mx-auto px-4 py-2">
                             <form
@@ -246,9 +246,61 @@ export default function Navbar({ cartItemCount = 0 }: NavbarProps) {
                                         setSearchTerm(e.target.value);
                                         setShowDropdown(true);
                                     }}
+                                    onFocus={() => searchTerm.length > 0 && setShowDropdown(true)}
                                 />
                                 <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                             </form>
+
+                            {showDropdown && debouncedSearch && (
+                                <>
+                                    <div
+                                        className="fixed inset-x-0 top-16 bottom-0 bg-black opacity-50 z-40"
+                                        onClick={() => setShowDropdown(false)}
+                                    />
+                                    <ul
+                                        className="absolute top-full left-0 right-0 z-50 bg-white rounded shadow-lg max-h-64 overflow-auto mt-1 border border-gray-300 dark:bg-gray-800 dark:border-gray-700"
+                                        onMouseDown={(e) => e.preventDefault()}
+                                    >
+                                        {isLoading ? (
+                                            Array.from({ length: 5 }).map((_, i) => (
+                                                <li
+                                                    key={i}
+                                                    className="animate-pulse px-4 py-2 border-b border-gray-300 dark:border-gray-600 flex items-center space-x-3"
+                                                >
+                                                    <div className="w-10 h-10 bg-gray-300 dark:bg-gray-700 rounded" />
+                                                    <div className="h-4 bg-gray-300 dark:bg-gray-700 rounded w-3/4" />
+                                                </li>
+                                            ))
+                                        ) : products.length > 0 ? (
+                                            products.map((p, index) => (
+                                                <li
+                                                    key={p.id}
+                                                    onClick={() => handleSelect(p.slug)}
+                                                    className={`cursor-pointer px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 flex items-center space-x-3 ${index !== products.length - 1
+                                                        ? "border-b border-gray-300 dark:border-gray-600"
+                                                        : ""
+                                                        }`}
+                                                >
+                                                    <Image
+                                                        src={p.images[0]?.url || "/images/placeholder.png"}
+                                                        alt={p.name}
+                                                        width={80}
+                                                        height={80}
+                                                        className="w-10 h-10 object-cover rounded"
+                                                        loading="lazy"
+                                                    />
+                                                    <span>{p.name}</span>
+                                                </li>
+                                            ))
+                                        ) : (
+                                            <li className="px-4 py-2 text-gray-500 dark:text-gray-400">
+                                                No products found
+                                            </li>
+                                        )}
+                                    </ul>
+                                </>
+                            )}
+
                         </div>
                     </motion.div>
                 )}
